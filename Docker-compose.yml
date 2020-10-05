@@ -1,0 +1,12 @@
+version: '2'
+services:
+  telegraf:
+    image: telegraf
+    hostname: telegraf
+    container_name: telegraf
+    volumes:
+      - /data/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+    labels:
+      - "traefik.enable=false"
+    environment: 
+      INFLUXDB_URL: localhost
