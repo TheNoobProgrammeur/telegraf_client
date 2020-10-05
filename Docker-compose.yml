@@ -5,7 +5,7 @@ services:
     hostname: telegraf
     container_name: telegraf
     volumes:
-      - /data/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - /data/telegraf.conf:/etc/telegraf/telegraf.conf
     labels:
       - "traefik.enable=false"
     environment: 
